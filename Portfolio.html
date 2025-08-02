@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Kossi NOUMAGNO, Data Analyst Junior spécialisé en Python, SQL et visualisation de données. En recherche de stage en analyse de données.">
+    <title>Kossi NOUMAGNO | Data Analyst Junior</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --secondary: #e2e8f0;
+        }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        .navbar {
+            background: var(--primary);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .hero {
+            background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+            padding: 5rem 0;
+        }
+        .section-title {
+            color: var(--primary);
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background: var(--primary);
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            height: 100%;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        .progress {
+            height: 10px;
+            border-radius: 5px;
+            background-color: var(--secondary);
+        }
+        .progress-bar {
+            background-color: var(--primary);
+        }
+        .skill-badge {
+            background: var(--primary);
+            color: white;
+            border-radius: 20px;
+            padding: 0.4rem 0.8rem;
+            font-weight: 500;
+        }
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+        .bg-light-custom {
+            background-color: var(--light);
+        }
+        .hover-shadow {
+            transition: box-shadow 0.3s;
+        }
+        .hover-shadow:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .badge-outline-primary {
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            background: transparent;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">Kossi NOUMAGNO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Compétences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Expériences</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projets</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero text-center">
+        <div class="container">
+            <img src="assets/profile.jpg" alt="Kossi Noumagno" class="profile-img rounded-circle mb-4">
+            <h1 class="display-5 fw-bold mb-3">Kossi NOUMAGNO</h1>
+            <h2 class="text-primary mb-4">Data Analyst Junior</h2>
+            <p class="lead mb-4 mx-auto" style="max-width: 600px;">
+                Étudiant en Master Data Science | Spécialisé en analyse et visualisation de données | En recherche de stage
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="#contact" class="btn btn-primary btn-lg px-4">
+                    <i class="fas fa-envelope me-2"></i>Me contacter
+                </a>
+                <a href="assets/cv_kossi_noumagno.pdf" download class="btn btn-outline-primary btn-lg px-4">
+                    <i class="fas fa-download me-2"></i>CV PDF
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- À propos -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-user me-2"></i>À propos</h2>
+            <div class="row align-items-center mt-4">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h3 class="mb-3">Transformons les données en décisions</h3>
+                    <p class="lead">
+                        Passionné par l'analyse de données et les mathématiques appliquées, je me spécialise dans l'extraction d'insights actionnables. Actuellement en Master 1 Data Science à l'Université de Haute-Alsace, je recherche un <strong>stage de 4 à 6 mois</strong> pour mettre en pratique mes compétences en analyse et visualisation de données.
+                    </p>
+                    <p>
+                        Mon objectif : aider les entreprises à prendre des décisions éclairées grâce à une analyse rigoureuse et des visualisations percutantes.
+                    </p>
+                    <a href="#skills" class="btn btn-primary mt-3">
+                        <i class="fas fa-chart-bar me-2"></i>Voir mes compétences
+                    </a>
+                </div>
+                <div class="col-lg-6">
+                    <div class="card shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title mb-4"><i class="fas fa-info-circle text-primary me-2"></i>Profil</h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-3 d-flex">
+                                    <i class="fas fa-graduation-cap text-primary me-3 mt-1"></i>
+                                    <div>
+                                        <h6 class="mb-0">Formation</h6>
+                                        <p class="mb-0 text-muted">Master 1 Ingénierie Mathématique & Data Science (UHA)</p>
+                                    </div>
+                                </li>
+                                <li class="mb-3 d-flex">
+                                    <i class="fas fa-map-marker-alt text-primary me-3 mt-1"></i>
+                                    <div>
+                                        <h6 class="mb-0">Localisation</h6>
+                                        <p class="mb-0 text-muted">Brunstatt, France (mobile sur toute l'Alsace)</p>
+                                    </div>
+                                </li>
+                                <li class="mb-3 d-flex">
+                                    <i class="fas fa-language text-primary me-3 mt-1"></i>
+                                    <div>
+                                        <h6 class="mb-0">Langues</h6>
+                                        <p class="mb-0 text-muted">Français (natif), Anglais (courant)</p>
+                                    </div>
+                                </li>
+                                <li class="d-flex">
+                                    <i class="fas fa-certificate text-primary me-3 mt-1"></i>
+                                    <div>
+                                        <h6 class="mb-0">Certification</h6>
+                                        <p class="mb-0 text-muted">Google Data Analytics (Coursera, 2025)</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences -->
+    <section id="skills" class="py-5 bg-light-custom">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-code me-2"></i>Compétences</h2>
+            <p class="lead text-center mb-5">Un mélange équilibré de compétences techniques et analytiques</p>
+            
+            <div class="row">
+                <!-- Colonne gauche - Niveaux de maîtrise -->
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <h4 class="mb-4"><i class="fas fa-chart-line text-primary me-2"></i>Niveaux de Maîtrise</h4>
+                    
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Python (Analyse de données)</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>SQL & Bases de données</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Visualisation de données</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Outils BI (Power BI, Tableau)</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Colonne droite - Stack technique -->
+                <div class="col-lg-6">
+                    <h4 class="mb-4"><i class="fas fa-tools text-primary me-2"></i>Stack Technique</h4>
+                    
+                    <div class="mb-4">
+                        <h5><i class="fas fa-database text-primary me-2"></i>Data Analysis</h5>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge skill-badge">Python</span>
+                            <span class="badge skill-badge">Pandas</span>
+                            <span class="badge skill-badge">NumPy</span>
+                            <span class="badge skill-badge">SciPy</span>
+                            <span class="badge skill-badge">Jupyter</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5><i class="fas fa-chart-pie text-primary me-2"></i>Data Visualization</h5>
+                        <div class="d-flex flex-wrap gap-2 mb-3">
+                            <span class="badge skill-badge">Matplotlib</span>
+                            <span class="badge skill-badge">Seaborn</span>
+                            <span class="badge skill-badge">Plotly</span>
+                            <span class="badge skill-badge">Plotly Express</span>
+                            <span class="badge skill-badge">Dash</span>
+                        </div>
+                        <ul class="list-unstyled ps-3">
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Création de graphiques avancés (heatmaps, boxplots, etc.)</li>
+                            <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Dashboards interactifs avec filtres dynamiques</li>
+                            <li><i class="fas fa-check text-primary me-2"></i>Visualisations géospatiales et temporelles</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5><i class="fas fa-server text-primary me-2"></i>Data Management</h5>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="badge skill-badge">SQL</span>
+                            <span class="badge skill-badge">Google BigQuery</span>
+                            <span class="badge skill-badge">Power BI</span>
+                            <span class="badge skill-badge">Tableau</span>
+                            <span class="badge skill-badge">Excel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expériences -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-briefcase me-2"></i>Expériences Professionnelles</h2>
+            <p class="lead text-center mb-5">Mon parcours avant la data science</p>
+            
+            <div class="row g-4">
+                <!-- Expérience 1 -->
+                <div class="col-md-6">
+                    <div class="card h-100 hover-shadow">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5 class="card-title mb-1">Technicien Informatique</h5>
+                                    <h6 class="card-subtitle text-muted">COMPUTER FOREVER | Lomé, Togo</h6>
+                                </div>
+                                <span class="badge bg-primary">2022 - 2024</span>
+                            </div>
+                            <ul class="mb-0">
+                                <li>Réparation et configuration de postes (Windows/Linux)</li>
+                                <li>Gestion des incidents réseaux et sécurité</li>
+                                <li>Automatisation de tâches avec scripts Python</li>
+                                <li>Analyse de logs système pour diagnostic</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Expérience 2 -->
+                <div class="col-md-6">
+                    <div class="card h-100 hover-shadow">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h5 class="card-title mb-1">Formateur en Informatique</h5>
+                                    <h6 class="card-subtitle text-muted">COMPUTER FOREVER | Lomé, Togo</h6>
+                                </div>
+                                <span class="badge bg-primary">2022 - 2024</span>
+                            </div>
+                            <ul class="mb-0">
+                                <li>Formation de 37+ apprenants aux outils bureautiques</li>
+                                <li>Enseignement des bases de données et SQL</li>
+                                <li>Création de supports pédagogiques visuels</li>
+                                <li>Analyse des besoins en compétences numériques</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets -->
+    <section id="projects" class="py-5 bg-light-custom">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-project-diagram me-2"></i>Projets Data</h2>
+            <p class="lead text-center mb-5">Mise en pratique de mes compétences en analyse et visualisation</p>
+            
+            <div class="row g-4">
+                <!-- Projet 1 -->
+                <div class="col-md-4">
+                    <div class="card h-100 hover-shadow">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-primary">Python</span>
+                                <span class="badge bg-success">Pandas</span>
+                            </div>
+                            <h5 class="card-title">Nettoyage de Données Automatisé</h5>
+                            <p class="card-text flex-grow-1">
+                                Pipeline Python pour le prétraitement de données avec gestion des valeurs manquantes, normalisation et détection d'anomalies.
+                            </p>
+                            <div class="mt-auto">
+                                <a href="https://github.com/Dave-kossi/Cleanning_Algorithm/tree/main" target="_blank" class="btn btn-sm btn-primary">
+                                    <i class="fab fa-github me-1"></i> Code source
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet 2 -->
+                <div class="col-md-4">
+                    <div class="card h-100 hover-shadow">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-primary">Power BI</span>
+                                <span class="badge bg-info">SQL</span>
+                            </div>
+                            <h5 class="card-title">Analyse E-Commerce</h5>
+                            <p class="card-text flex-grow-1">
+                                Dashboard interactif analysant le comportement client avec segmentation RFM et recommandations commerciales.
+                            </p>
+                            <div class="mt-auto">
+                                <a href="https://github.com/Dave-kossi/analyse_produits_e-commerce" target="_blank" class="btn btn-sm btn-primary">
+                                    <i class="fab fa-github me-1"></i> Voir le projet
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet 3 -->
+                <div class="col-md-4">
+                    <div class="card h-100 hover-shadow">
+                        <div class="card-body d-flex flex-column">
+                            <div class="d-flex justify-content-between mb-3">
+                                <span class="badge bg-primary">Python</span>
+                                <span class="badge bg-warning">Machine Learning</span>
+                            </div>
+                            <h5 class="card-title">Prédiction de Séries Temporelles</h5>
+                            <p class="card-text flex-grow-1">
+                                Modèle ARIMA pour prévoir des tendances financières avec une précision de 87% sur les données de test.
+                            </p>
+                            <div class="mt-auto">
+                                <a href="#" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-code me-1"></i> Détails sur demande
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="section-title"><i class="fas fa-envelope me-2"></i>Contact</h2>
+            <p class="lead text-center mb-5">Disponible pour un stage en Data Analysis à partir de <div Septembre/2025=""></div></p>
+            
+            <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="card h-100 hover-shadow">
+                        <div class="card-body">
+                            <h4 class="mb-4"><i class="fas fa-paper-plane text-primary me-2"></i>Envoyez-moi un message</h4>
+                            <form id="contactForm">
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Votre nom</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Votre email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="subject" class="form-label">Sujet</label>
+                                    <input type="text" class="form-control" id="subject" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">
+                                    <i class="fas fa-paper-plane me-2"></i>Envoyer
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6">
+                    <div class="card h-100 hover-shadow">
+                        <div class="card-body">
+                            <h4 class="mb-4"><i class="fas fa-info-circle text-primary me-2"></i>Coordonnées</h4>
+                            
+                            <div class="mb-4">
+                                <h5><i class="fas fa-map-marker-alt text-primary me-2"></i>Adresse</h5>
+                                <p>11 rue des Frères Lumière<br>68350 Brunstatt, France</p>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h5><i class="fas fa-envelope text-primary me-2"></i>Email</h5>
+                                <p>noumagnokossi0@gmail.com</p>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h5><i class="fas fa-phone text-primary me-2"></i>Téléphone</h5>
+                                <p>+33 7 45 97 43 82</p>
+                            </div>
+                            
+                            <div>
+                                <h5><i class="fas fa-share-alt text-primary me-2"></i>Réseaux</h5>
+                                <div class="d-flex gap-3 mt-3">
+                                    <a href="https://www.linkedin.com/in/kossi-noumagno" target="_blank" class="btn btn-outline-primary">
+                                        <i class="fab fa-linkedin-in me-2"></i>LinkedIn
+                                    </a>
+                                    <a href="https://github.com/Dave-kossi" target="_blank" class="btn btn-outline-dark">
+                                        <i class="fab fa-github me-2"></i>GitHub
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white">
+        <div class="container text-center">
+            <div class="mb-3">
+                <a href="#" class="text-white mx-2"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-white mx-2"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p class="mb-0">© 2024 Kossi NOUMAGNO - Tous droits réservés</p>
+            <p class="mb-0">En recherche active d'un stage en Data Analysis</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Animation des barres de compétences
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateProgressBars = () => {
+                const progressBars = document.querySelectorAll('.progress-bar');
+                progressBars.forEach(bar => {
+                    const targetWidth = bar.style.width;
+                    bar.style.width = '0';
+                    setTimeout(() => {
+                        bar.style.width = targetWidth;
+                    }, 300);
+                });
+            };
+
+            // Détection du scroll pour animer les compétences
+            const skillsSection = document.querySelector('#skills');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateProgressBars();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            observer.observe(skillsSection);
+
+            // Gestion du formulaire
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Message envoyé avec succès ! Je vous répondrai dès que possible.');
+                    this.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>
